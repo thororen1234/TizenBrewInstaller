@@ -160,7 +160,7 @@ module.exports.onStart = function () {
                                     return;
                                 }
 
-                                if (payload.url && payload.url === 'reisxd/TizenBrewInstaller' &&
+                                if (payload.url && payload.url === 'thororen1234/TizenBrewInstaller' &&
                                     !isTV && existsSync(`${homedir()}/share/tizenbrewInstallerConfig.json`)) {
                                     // Send the existing config to the TV
                                     PushFile(adbClient, '/home/owner/share/tizenbrewInstallerConfig.json', readFileSync(`${homedir()}/share/tizenbrewInstallerConfig.json`), () => {

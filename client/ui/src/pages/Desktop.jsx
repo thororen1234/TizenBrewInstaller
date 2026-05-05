@@ -48,7 +48,7 @@ export default function Desktop() {
                             context.state.client.send({
                                 type: Events.InstallPackage,
                                 payload: {
-                                    url: 'reisxd/TizenBrew'
+                                    url: 'thororen1234/TizenBrew'
                                 }
                             })
                         }}>
@@ -63,7 +63,7 @@ export default function Desktop() {
                             context.state.client.send({
                                 type: Events.InstallPackage,
                                 payload: {
-                                    url: 'reisxd/TizenBrewInstaller'
+                                    url: 'thororen1234/TizenBrewInstaller'
                                 }
                             })
                         }}>

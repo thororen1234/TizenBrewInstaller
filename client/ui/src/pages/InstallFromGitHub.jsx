@@ -43,7 +43,7 @@ export default function InstallFromGitHub() {
                             loc.route('/ui/dist/index.html');
                             setFocus('sn:focusable-item-1');
                         }}
-                        placeholder="reisxd/TizenBrew"
+                        placeholder="thororen1234/TizenBrew"
                     />
                 </Item>
             </div>

@@ -37,6 +37,6 @@
         "sdbConnectionReset": "Could not connect to the SDB Daemon. Either you haven't set the Host PC IP to this device's IP, or you didn't restart the TV properly. Hold the power button till you see the Samsung logo to restart the TV."
     },
     "__contributors": [
-        "reisxd"
+        "thororen1234"
     ]
 }

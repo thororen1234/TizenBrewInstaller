@@ -37,7 +37,7 @@ export default function Home() {
                 context.state.client.send({
                     type: Events.InstallPackage,
                     payload: {
-                        url: 'reisxd/TizenBrewInstaller'
+                        url: 'thororen1234/TizenBrewInstaller'
                     }
                 });
             }
@@ -58,9 +58,9 @@ export default function Home() {
                     <div className="p-8 rounded-2xl shadow-2xl max-w-full">
                         <h3 className="text-3xl font-bold mb-4">{t('resigning.resigningRequired')}</h3>
                         <p className="text-xl mb-4 whitespace-pre">{t('resigning.resigningRequiredDesc')}</p>
-                        <img 
-                            src={SignInQrCode} 
-                            alt="Sign In QR Code" 
+                        <img
+                            src={SignInQrCode}
+                            alt="Sign In QR Code"
                             className="mt-2 w-80 h-80 max-w-full max-h-[60vw] object-contain mx-auto border-8 rounded-lg"
                         />
                         <p className="mt-4 text-lg">{t('resigning.resigningRequiredAccessInfo', { ip: webapis.network.getIp() })}</p>
@@ -73,7 +73,7 @@ export default function Home() {
                     context.state.client.send({
                         type: Events.InstallPackage,
                         payload: {
-                            url: 'reisxd/TizenBrew'
+                            url: 'thororen1234/TizenBrew'
                         }
                     })
                 }}>

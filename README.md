@@ -10,7 +10,7 @@ To install TizenBrew Installer, you'll need a PC or a mobile device. Since Samsu
 
 ## TizenBrew Installer Desktop
 
-TizenBrew Installer Desktop is TizenBrew Installer on your PC or (Android only) mobile device. Download the latest release from the [releases section](https://github.com/reisxd/TizenBrewInstaller/releases/latest).
+TizenBrew Installer Desktop is TizenBrew Installer on your PC or (Android only) mobile device. Download the latest release from the [releases section](https://github.com/thororen1234/TizenBrewInstaller/releases/latest).
 
 ### Using TizenBrew Installer Desktop manually
 
@@ -20,7 +20,7 @@ If you're using Termux or would like to use TizenBrew Installer Desktop manually
 
 2. Install [git](https://git-scm.com/) if you don't have it already (on Android/Termux, use `pkg install git`).
 
-3. Clone the repository using `git clone https://github.com/reisxd/TizenBrewInstaller.git`.
+3. Clone the repository using `git clone https://github.com/thororen1234/TizenBrewInstaller.git`.
 
 4. Navigate to the `ui` folder using `cd TizenBrewInstaller/client/ui` and run `npm install --force && npm run build`.
 
