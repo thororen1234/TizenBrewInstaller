@@ -1,10 +1,9 @@
 name: Build TizenBrew Installer and Release
 
-
 on:
   push:
     tags:
-      - 'v*.*.*'
+      - "v*.*.*"
 
 jobs:
   build:
@@ -15,7 +14,7 @@ jobs:
         with:
           fetch-depth: 0 # fetch full history for tags
           fetch-tags: true
-      
+
       - name: Fetch tags (safety)
         run: |
           git fetch --tags --force --prune
@@ -38,7 +37,7 @@ jobs:
             fi
           fi
           echo "RELEASE_VERSION=$TAG" >> $GITHUB_ENV
-      
+
       - name: Install ldid (required system tool)
         uses: MOZGIII/install-ldid-action@v1
         with:
@@ -75,26 +74,19 @@ jobs:
       - name: Upload TizenBrew package artifact for Old Tizen
         uses: actions/upload-artifact@v4
         with:
-            name: app-${{ github.sha }}-old.wgt
-            path: client/release/TizenBrewInstaller.wgt
-      
-      - name: Release TizenBrew Build Results
+          name: app-${{ github.sha }}-old.wgt
+          path: client/release/TizenBrewInstaller.wgt
+
+      - name: Build Installer Desktop
+        working-directory: client
+        run: |
+          pkg -C GZip . --no-bytecode --public
+
+      - name: Release All Assets
         uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ env.RELEASE_VERSION }}
           target_commitish: ${{ github.sha }}
           files: |
             client/release/*
-
-      - name: Build Installer Desktop
-        working-directory: client
-        run: |
-          pkg -C GZip . --no-bytecode --public
-        
-      - name: Release Installer Desktop
-        uses: softprops/action-gh-release@v1
-        with:
-          tag_name: ${{ env.RELEASE_VERSION }}
-          target_commitish: ${{ github.sha }}
-          files: |
             client/dist/*
